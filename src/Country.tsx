@@ -1,31 +1,31 @@
 import React from 'react';
-import {City} from "./City";
-import {BanknotesType, MoneyType} from "./App";
+import {City} from './City';
+import {BanknotesType, MoneyType} from './App';
 
 type CountryPropsType = {
-    data: any
-    setFilterValue: any // давайте подумаем, setFilter -это гоузчик, у которого всегда в руках товар
-  }
+    data: MoneyType[]
+    setFilterValue: (filterValue: BanknotesType) => void // давайте подумаем, setFilter -это гоузчик, у которого всегда в руках товар
+}
 
 export const Country = (props: CountryPropsType) => {
     const setAll = () => {
-        // засетаем 'All'
+        return props.setFilterValue('ALL')
     }
 
     const setDollars = () => {
-        // засетаем 'Dollars'
+        return props.setFilterValue('Dollars')
     }
 
-    const setRUBLS = () => {
-        // засетаем 'RUBLS'
+    const setRUBLES = () => {
+        return props.setFilterValue('RUBLES')
     }
 
     return (
         <div>
-            <button onClick={()=>{'засетаем All'}}>All</button>
-            <button onClick={()=>{'засетаем Dollars'}}>Dollars</button>
-            <button onClick={()=>{'засетаем RUBLS'}}>RUBLS</button>
-            <City data={"передаем денюжки в город"}/>
+            <button onClick={setAll}>All</button>
+            <button onClick={setDollars}>Dollars</button>
+            <button onClick={setRUBLES}>RUBLES</button>
+            <City data={props.data}/>
         </div>
     );
 };
