@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import App1 from './dop1/App1';
-import App2 from './dop2/App2';
-import App3 from './dop3/App3';
-import App4 from './dop4/App4';
+//import App2 from './dop2/App2';
+//import App3 from './dop3/App3';
+//import App4 from './dop4/App4';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement

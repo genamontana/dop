@@ -17,7 +17,7 @@ export type TasksType = {
 
 export type FilterValuesType = "all" | "active" | "completed";
 
-
+/*
 
 function App() {
     // let todolistId1 = v1();
@@ -41,11 +41,11 @@ function App() {
 
     const [todo, setTodo] = useState<Array<ObjectType>>([
         {
-            title: "What to learn",
-            filter: "all",
+            title: 'What to learn',
+            filter: 'all',
             tasks: [
-                {taskId: v1(), title: "HTML&CSS", isDone: true},
-                {taskId: v1(), title: "JS", isDone: true}
+                {taskId: v1(), title: 'HTML&CSS', isDone: true},
+                {taskId: v1(), title: 'JS', isDone: true}
             ],
             students: [
                 'Rick Kane',
@@ -101,11 +101,11 @@ function App() {
             ]
         },
         {
-            title: "What to do",
-            filter: "all",
+            title: 'What to do',
+            filter: 'all',
             tasks: [
-                {taskId: v1(), title: "HTML&CSS2", isDone: true},
-                {taskId: v1(), title: "JS2", isDone: true}
+                {taskId: v1(), title: 'HTML&CSS2', isDone: true},
+                {taskId: v1(), title: 'JS2', isDone: true}
             ],
             students: [
                 'Jago Wormald1',
@@ -156,8 +156,6 @@ function App() {
             ]
         }
     ])
-
-
 
 
     function removeTask(id: string, todolistId: string) {
@@ -216,10 +214,10 @@ function App() {
                     let allTodolistTasks = tasks[tl.id];
                     let tasksForTodolist = allTodolistTasks;
 
-                    if (tl.filter === "active") {
+                    if (tl.filter === 'active') {
                         tasksForTodolist = allTodolistTasks.filter(t => t.isDone === false);
                     }
-                    if (tl.filter === "completed") {
+                    if (tl.filter === 'completed') {
                         tasksForTodolist = allTodolistTasks.filter(t => t.isDone === true);
                     }
 
@@ -243,3 +241,4 @@ function App() {
 }
 
 export default App;
+*/
