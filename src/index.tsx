@@ -1,30 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+//import App from './App';
 import reportWebVitals from './reportWebVitals';
 //import App1 from './dop1/App1';
-import App2 from './dop2/App2';
-import {BrowserRouter} from 'react-router-dom';
-//import App3 from './dop3/App3';
+//import App2 from './dop2/App2';
+//import {BrowserRouter} from 'react-router-dom';
+import App3 from './dop3/App3';
 //import App4 from './dop4/App4';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
-    <BrowserRouter>
-        <App2/>
-    </BrowserRouter>
-    /*
+    /* <BrowserRouter>
+         <App2/>
+     </BrowserRouter>*/
     <React.StrictMode>
-        {/!*<App/>*!/}
-        {/!*<App1/>*!/}
-        {/!*<App2/>*!/}
-        {/!*<App3/>*!/}
-        {/!* <App4/>*!/}
+        {/*<App/>*/}
+        {/*<App1/>*/}
+        {/*<App2/>*/}
+        <App3/>
+        {/* <App4/>*/}
     </React.StrictMode>
-    */
 )
 ;
 
