@@ -1,13 +1,12 @@
 import React from 'react';
-import {PagesType} from "../../dataState/dataState";
-//import {useParams} from "react-router-dom";
-import {Content} from "./Content";
+import {PagesType} from '../../dataState/dataState';
+import {useParams} from "react-router-dom";
+import {Content} from './Content';
 
 type PagePropsType = {
     pages: Array<PagesType>
 }
 
-/*
 export const Page = (props: PagePropsType) => {
     const param = useParams()
     // console.log('params: ', Number(param.id))
@@ -23,5 +22,5 @@ export const Page = (props: PagePropsType) => {
         //     </div>
         // </div>
     );
-};*/
+};
 
