@@ -5,11 +5,10 @@ import {Error404} from './pages/Error404';
 import {Page} from './pages/Page';
 import {dataState} from '../dataState/dataState';
 import {useWindowSize} from '../helpers/useWindowSize';
+import { LocalStorage } from './pages/LocalStorage';
 
 
 export const Site = () => {
-    const [burger, setBurger] = useState(true)
-
     const size = useWindowSize();
     console.log(size)
 
@@ -34,19 +33,24 @@ export const Site = () => {
             <div className={styles.header}><h1>HEADER</h1></div>
             <div className={styles.body}>
                 {
-                    burger
+                    size > 1000
                         ? <div className={styles.nav}>
                             <div><NavLink to={'/page/0'}
-                                          className={({isActive}) => isActive ? styles.active : styles.navLink}>PAGE
-                                1</NavLink></div>
+                                          className={({isActive}) => isActive ? styles.active : styles.navLink}>
+                                PAGE 1
+                            </NavLink></div>
                             <div><NavLink to={'/page/1'}
-                                          className={({isActive}) => isActive ? styles.active : styles.navLink}>PAGE
-                                2</NavLink></div>
+                                          className={({isActive}) => isActive ? styles.active : styles.navLink}>
+                                PAGE 2
+                            </NavLink></div>
                             <div><NavLink to={'/page/2'}
-                                          className={({isActive}) => isActive ? styles.active : styles.navLink}>PAGE
-                                3</NavLink></div>
-                            {/*<div><NavLink to={'/page3'} className={({isActive})=>isActive ?styles.active : styles.navLink}>PAGE 3</NavLink></div>*/}
-                            {/*<div><a href='/page3'>PAGE 3 AHREF</a></div>*/}
+                                          className={({isActive}) => isActive ? styles.active : styles.navLink}>
+                                PAGE 3
+                            </NavLink></div>
+                            <div><NavLink to={'/page/localStorage'}
+                                          className={({isActive}) => isActive ? styles.active : styles.navLink}>
+                                Local storage
+                            </NavLink></div>
                         </div>
                         : <div></div>
                 }
@@ -56,6 +60,7 @@ export const Site = () => {
                         <Route path={'/'} element={<Navigate to={'/page/0'}/>}/>
 
                         <Route path={'/page/:id'} element={<Page pages={dataState.pages}/>}/>
+                        <Route path={'/page/localStorage'} element={<LocalStorage/>}/>
 
                         {/*<Route path={'/page2'} element={<PageTwo/>}/>*/}
                         {/*<Route path={'/page3'} element={<PageThree/>}/>*/}
