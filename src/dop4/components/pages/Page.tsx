@@ -1,6 +1,6 @@
 import React from 'react';
 import {PagesType} from '../../dataState/dataState';
-import {useParams} from "react-router-dom";
+import {useParams} from 'react-router-dom';
 import {Content} from './Content';
 
 type PagePropsType = {
@@ -12,7 +12,10 @@ export const Page = (props: PagePropsType) => {
     // console.log('params: ', Number(param.id))
 
     return (
-        <Content heading={props.pages[Number(param.id)].heading} pages={props.pages[Number(param.id)].about}/>
+        <Content heading={props.pages[Number(param.id)].heading}
+                 pages={props.pages[Number(param.id)].about}
+                 currentPageNumber={Number(param.id)}
+                 arrayLength={props.pages.length-1}/>
         // <div>
         //     <div>
         //         {props.pages[Number(param.id)].heading}

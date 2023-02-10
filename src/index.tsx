@@ -5,7 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 //import App1 from './dop1/App1';
 //import App2 from './dop2/App2';
-//import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 //import App3 from './dop3/App3';
 import App4 from './dop4/App4';
 
@@ -21,7 +21,9 @@ root.render(
         {/*<App1/>*/}
         {/*<App2/>*/}
         {/*<App3/>*/}
-         <App4/>
+        <BrowserRouter>
+            <App4/>
+        </BrowserRouter>
     </React.StrictMode>
 )
 ;
